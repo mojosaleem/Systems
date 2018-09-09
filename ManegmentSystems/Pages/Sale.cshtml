@@ -1,0 +1,203 @@
+﻿@page
+@model ManegmentSystems.Pages.SaleModel
+@{
+    ViewData["Title"] = "Sale";
+}
+
+<form asp-page="./sale" method="post" enctype="multipart/form-data">
+    <p style="text-align:right" dir="rtl"> <span class="blog-title">معلومات السيارة </span> </p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>رقم السيارة</label>
+                <input class="form-control" type="text" value="@Model.cars.carID" asp-for="cars.carID" readonly>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>اسم المصنع </label>
+                <input class="form-control" type="text" value="@Model.cars.manufactureName" readonly>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>اسم الموديل</label>
+                <input class="form-control" type="text" placeholder="" value="@Model.cars.ModelName" readonly>
+            </div>
+        </div>
+
+    </div>
+
+    <p style="text-align:right" dir="rtl"> <span class="blog-title">معلومات المشتري  </span> </p>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>اسم المشتري</label>
+                <input class="form-control" type="text" asp-for="cars.CustomerName">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>رقم هاتف المشتري </label>
+                <input class="form-control" type="text" asp-for="cars.CustomerPhone">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>عنوان المشتري</label>
+                <input class="form-control" type="text" asp-for="cars.CustomerAdress">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>صورة هوية المشتري </label>
+                <input class="form-control" type="file" asp-for="cars.CustomerIdPhoto">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">₪</span>
+            </div>
+            <label for="income">سعر البيع </label>
+            <input type="text" id="income" asp-for="cars.PriceIncome" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">₪</span>
+            </div>
+            <label for="income">الكاش المقبوض  </label>
+            <input type="text" id="income" asp-for="cars.cashTaken" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="form-body" style=" text-align: right; font-size:x-large !important" dir="rtl">
+        <ul id="sidebarnav">
+            <li>
+
+                <a class="has-arrow waves-effect  waves-dark" href="javascript:void(0)" aria-expanded="false">
+                    <i class="fa fa-money"></i>
+                    <span class="hide-menu">معلومات الشكات</span>
+                </a>
+                <ul aria-expanded="false" class="collapse">
+
+                    </a>
+                    <hr class="m-t-0 m-b-40" />
+                    <div class="row">
+                        <div class="col-md-8">
+
+
+
+                            <label class="control-label text-right" for="numberofcheck" style="font-size:large">عدد الشكات</label>
+                            <input type="text" class="form-control col-md-10" id="numberofcheck" />
+
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <div class="col-md-9">
+                                    <button type="button" class="btn btn-info " onclick="addnew('checks','numberofcheck')">
+                                        <i class="fa fa-plus-circle"></i> إضافة جديد
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="checks" class="row">
+                        <div class="col-md-4">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">₪</span>
+                                </div>
+                                <input type="text" asp-for="cars.CheckAmount" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <label class="control-label text-right col-md-3" for="DueDate" style="font-size:large">تاريخ الشك</label>
+                                <div class="col-md-9">
+                                    <input class="form-control daterangepicker" id="DueDate" type="date" asp-for="cars.DueDate">
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <label class="control-label text-right  col-md-3" for="CheckOwner" style="font-size:large">صاحب الشك</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="CheckOwner" class="form-control" asp-for="cars.CheckOwner">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group row">
+                                <label class="control-label text-right col-md-3" style="font-size:large">صورة الشك</label>
+                                <div class="col-md-9">
+                                    <input class="form-control fileupload" type="file" asp-for="cars.CheckPhoto ">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </ul>
+            </li>
+        </ul>
+
+
+
+    </div>
+    <hr>
+    <button type="submit" class="btn btn-success "> بيع</button>
+</form>
+@section Scripts{
+    <script>
+        function clonrow() {
+            var div = document.getElementById('checks'),
+                clone = div.cloneNode(true); // true means clone all childNodes and all event handlers
+
+            div.appendChild(clone);
+        }
+        function addnew(source, numofrepete) {
+            multiplyNode(document.getElementById(source), document.getElementById(numofrepete).value, true);
+
+        }
+        function multiplyNode(node, count, deep) {
+            for (var i = 0, copy; i < count - 1; i++) {
+                copy = node.cloneNode(deep);
+                node.parentNode.insertBefore(copy, node);
+            }
+        }
+
+
+        $(document).ready(function () {
+
+            $('.textarea_editor').wysihtml5();
+
+
+        });
+    </script>
+}

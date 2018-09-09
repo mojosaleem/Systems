@@ -1,0 +1,318 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-ManegmentSystems-52867A43-3801-40C5-AAD7-18093A6FE116</UserSecretsId>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\11783c0e-7fe8-4626-bf63-3d7b2f1a6b4d.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Check\0db5d7f6-b118-4aa5-a282-f5757c44ecd4.jpg" />
+    <Content Include="Check\11783c0e-7fe8-4626-bf63-3d7b2f1a6b4d.jpg" />
+    <Content Include="Check\2f42bd7c-3854-4063-83f4-8a39a8b42321.jpg" />
+    <Content Include="Check\480f8d13-f45b-42c7-b27f-b7ca96b5d69b.jpg" />
+    <Content Include="Check\49fb40e0-03b3-4e8a-a858-02706dc1d2bf.jpg" />
+    <Content Include="Check\674f9765-7da1-409b-a370-45039f041803.jpg" />
+    <Content Include="Check\6abf5463-d643-4782-8dd5-6a73d933eab1.jpg" />
+    <Content Include="Check\7fa74a98-ef38-46a3-a564-36c948353a98.jpg" />
+    <Content Include="Check\84d7b7c7-e4f8-4465-aac3-8da390124339.jpg" />
+    <Content Include="Check\9ee83f65-2bda-4718-9ba7-b1b32e2c7f49.jpg" />
+    <Content Include="Check\dfbd68cf-59e6-489a-b9f1-e03a0655a08b.png" />
+    <Content Include="Check\e1038a32-cad4-4856-b4ca-b072a05f6a69.jpg" />
+    <Content Include="Check\ebb3e316-bbd6-429e-913e-a2c886721b17.jpg" />
+    <Content Include="Check\f0d0526b-3452-4ef5-a2e2-1086856f6f0b.jpg" />
+    <Content Include="Check\f1442371-af3f-4c85-938b-f5d6f0109f3a.jpg" />
+    <Content Include="Check\f2b824e8-3920-4877-8a7c-315e888d0cba.jpg" />
+    <Content Include="Check\fe6bda14-da5e-4788-ba4d-88b25699e047.png" />
+    <Content Include="Customers\18392ca8-aa7a-4ee8-b834-a2ac14d60b98.png" />
+    <Content Include="Customers\71a83cbd-c449-4900-b5b7-50da0b710d1d.jpg" />
+    <Content Include="Customers\8e01be90-98cb-4c3d-9858-476157bfe311.png" />
+    <Content Include="Customers\fed894b9-d0af-49a3-b2b3-cc7cead84889.png" />
+    <Content Include="ID\00a74973-6b37-47eb-b6d5-f1cfdba36899.png" />
+    <Content Include="ID\0495b3c6-a439-49c6-9e73-e26c512f8024.jpg" />
+    <Content Include="ID\0b7efc52-00f8-4656-a871-695a7285d3dc.png" />
+    <Content Include="ID\0bb23342-552b-4d23-83fe-fa010b4eeccc.jpg" />
+    <Content Include="ID\0d1cb57f-b989-4c40-bf3d-fd5d2dec483a.jpg" />
+    <Content Include="ID\0fdec7b4-e213-40d4-9207-39b163c335c9.jpg" />
+    <Content Include="ID\11284a07-46ec-44d8-b54c-bc95186bf7a7.jpg" />
+    <Content Include="ID\11783c0e-7fe8-4626-bf63-3d7b2f1a6b4d.jpg" />
+    <Content Include="ID\1233cffd-5f93-4bf8-b7be-1e770abf8fb2.jpg" />
+    <Content Include="ID\1cde129c-f6c7-487a-b977-e82c4d4a12f8.jpg" />
+    <Content Include="ID\1eeb5e42-332f-4baf-aa27-d97f775e780b.jpg" />
+    <Content Include="ID\21115f6c-0ed3-4e4d-b61f-78bc199da92e.jpg" />
+    <Content Include="ID\22b5b376-6dba-465e-920d-6718b3cfed72.jpg" />
+    <Content Include="ID\2381e649-6770-496d-800f-44dcdcc47048.jpg" />
+    <Content Include="ID\256d822a-e796-41c2-b2a9-306babda0e6c.jpg" />
+    <Content Include="ID\25835827-ada9-426d-bd35-30b2465487cf.jpg" />
+    <Content Include="ID\269a9989-7216-4fed-a799-03da096db3d1.jpg" />
+    <Content Include="ID\2c27bcbc-bf9d-49b5-b4b2-5330ba82f988.jpg" />
+    <Content Include="ID\2c77e6a2-7b39-425c-a48c-acd369cdf27a.png" />
+    <Content Include="ID\2f42bd7c-3854-4063-83f4-8a39a8b42321.jpg" />
+    <Content Include="ID\335d6f6e-1f00-4f10-82ac-029f18c28d1b.png" />
+    <Content Include="ID\37a5478f-c910-4c30-8159-380e1fc0d798.jpg" />
+    <Content Include="ID\3f10cd92-e9dc-4952-b2bb-26dd00767968.jpg" />
+    <Content Include="ID\487ecf18-4593-4ea5-b53c-5943469d6721.jpg" />
+    <Content Include="ID\4bd1b7f1-1772-47d1-83e0-287baa95ef35.png" />
+    <Content Include="ID\4beb02b6-014a-4555-9857-4ed712ebc6bb.png" />
+    <Content Include="ID\5021fe48-dba3-45d0-b5db-ec584ceabf9f.jpg" />
+    <Content Include="ID\516c4431-5230-43ab-a4fe-4d6261bfcf2f.jpg" />
+    <Content Include="ID\5224ccf4-9433-4a0b-b299-cb609a6a5cb4.png" />
+    <Content Include="ID\55ef6a9b-5002-4627-a511-0cee45fe4321.jpg" />
+    <Content Include="ID\5790dbd2-f786-44ea-8921-40f19466ef17.jpg" />
+    <Content Include="ID\5801cd41-fb7d-4b80-ab0f-94b5ae299a6d.jpg" />
+    <Content Include="ID\5c33e8b0-0f2c-4125-a74f-bacdc71e4e7d.jpg" />
+    <Content Include="ID\63ed1ef8-c293-40f2-8f41-211773f415f3.jpg" />
+    <Content Include="ID\68888657-4696-4546-8331-c7b421d2365e.jpg" />
+    <Content Include="ID\6b8f05b9-e938-4f46-8a65-c963e6b5a37b.jpg" />
+    <Content Include="ID\6c51efd6-4168-4859-840b-393cebb2b2ee.jpg" />
+    <Content Include="ID\6db4360c-aa67-4538-a478-effb6d6494e6.jpg" />
+    <Content Include="ID\6e27dc97-6f86-4a9a-9c57-d713f6852768.jpg" />
+    <Content Include="ID\6f45fd07-8e24-41c3-8cbe-868fce60bf3a.jpg" />
+    <Content Include="ID\71c15081-9767-449f-9a0b-19b77c66b758.png" />
+    <Content Include="ID\71f252b2-6ba2-40ec-b4c8-6866d3e3a3ba.jpg" />
+    <Content Include="ID\725d02fe-2106-49ce-8c30-81f2c0d27b83.jpg" />
+    <Content Include="ID\764dd48d-cd7e-4923-8cde-783aeb856726.jpg" />
+    <Content Include="ID\77f4ea7a-47c7-4da2-8b24-8cc51e886a94.jpg" />
+    <Content Include="ID\7b46b412-dd91-4ad0-975b-197ce5e4e0e2.jpg" />
+    <Content Include="ID\7fa47fd3-894d-4b65-bfb6-f4ca467da873.jpg" />
+    <Content Include="ID\820e807a-cf53-4ebb-a215-7467c723c41c.jpg" />
+    <Content Include="ID\8221085f-32cc-4990-ab7a-06918fc44e51.jpg" />
+    <Content Include="ID\8275081b-78b0-400a-b70d-bc33f95264d2.jpg" />
+    <Content Include="ID\83441b87-dd9b-4aa9-a1de-f39f562a51c5.jpg" />
+    <Content Include="ID\8356fc19-7fb5-4042-914e-c383b13c321e.jpg" />
+    <Content Include="ID\8466524b-30c7-49df-ba26-14352df6d03e.jpg" />
+    <Content Include="ID\846f261f-26bd-4967-92ab-2418bf32e896.jpg" />
+    <Content Include="ID\84f5ddc3-bd3f-4652-85b6-636669e9e299.jpg" />
+    <Content Include="ID\8669c59e-9ea1-45c9-abf6-5a73967cd3e9.jpg" />
+    <Content Include="ID\87800470-1ff3-45c9-b733-15464d603af3.jpg" />
+    <Content Include="ID\8931394d-d924-43aa-bf66-0f884fda6545.jpg" />
+    <Content Include="ID\8b8adae2-97b1-413b-9c1e-a531cc4cabca.jpg" />
+    <Content Include="ID\917b8cbe-3da2-4fed-b65b-0c4386fc116e.jpg" />
+    <Content Include="ID\92d04b4d-9f3d-4df6-8f6a-14cb1889677d.jpg" />
+    <Content Include="ID\946d52d1-acbf-4305-83f4-a2dd1e66c836.png" />
+    <Content Include="ID\95ffeed1-9765-4bcc-a4f0-4131ba672cb4.jpg" />
+    <Content Include="ID\96490322-4b5a-457c-885b-de0a2cd4de41.jpg" />
+    <Content Include="ID\9b7ff3bd-2f9f-4bb9-9d98-c2dfefdc79f8.jpg" />
+    <Content Include="ID\9c4a7be4-2168-4cca-8821-64d1370b11e2.jpg" />
+    <Content Include="ID\a04508e6-72e0-46dd-a246-3b35be8cbcf6.png" />
+    <Content Include="ID\a993fb95-ff37-458a-b54e-16f9d4e66d08.jpg" />
+    <Content Include="ID\a9b73031-753a-4578-90e4-2e11a81b6726.jpg" />
+    <Content Include="ID\ac4352f7-d5d0-4a4c-afd4-4d0803a3d9e5.jpg" />
+    <Content Include="ID\b39b25e8-4711-4562-930e-031f9616ee4e.jpg" />
+    <Content Include="ID\c7667a86-c71d-49a1-be28-3d9ea07939a6.jpg" />
+    <Content Include="ID\c7b3d5f7-27d9-4e4d-86bc-b88333b02034.jpg" />
+    <Content Include="ID\c8a60bd9-9508-446c-aab1-9b389211af21.jpg" />
+    <Content Include="ID\cdb79411-3ee6-4d7f-893f-f58a9b451b36.jpg" />
+    <Content Include="ID\d025a3f7-84fd-4290-b906-a457e3776a6e.jpg" />
+    <Content Include="ID\d23c7b05-7894-4bfa-a075-5762b276fc81.jpg" />
+    <Content Include="ID\d4322847-aebc-432c-b5b3-8cccfe55474b.jpg" />
+    <Content Include="ID\d44d812b-6cc4-480a-bc4f-25a303b6be24.jpg" />
+    <Content Include="ID\d6873b2f-63b4-44c4-8ef9-8cf8d781332b.png" />
+    <Content Include="ID\e442ac77-4f92-4ccd-a978-690bfc746fe2.jpg" />
+    <Content Include="ID\ff723fba-373b-4b30-939c-cd07d17fa01e.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Shared\Error.cshtml" />
+    <None Include="Pages\Shared\_CookieConsentPartial.cshtml" />
+    <None Include="Pages\Shared\_Layout.cshtml" />
+    <None Include="Pages\Shared\_LoginPartial.cshtml" />
+    <None Include="Pages\Shared\_ValidationScriptsPartial.cshtml" />
+  </ItemGroup>
+ <ItemGroup>
+    <None Include="Pages\Shared\_rightside.cshtml" />
+    <None Include="wwwroot\dist\css\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\dist\css\fonts\icomoon.ttf" />
+    <None Include="wwwroot\dist\css\fonts\Material-Design-Iconic-Font.ttf" />
+    <None Include="wwwroot\dist\css\fonts\materialdesignicons-webfont.ttf" />
+    <None Include="wwwroot\dist\css\fonts\Simple-Line-Icons.ttf" />
+    <None Include="wwwroot\dist\css\fonts\themify.ttf" />
+    <None Include="wwwroot\dist\css\pages\bootstrap-switch.css" />
+    <None Include="wwwroot\dist\css\pages\breadcrumb-page.css" />
+    <None Include="wwwroot\dist\css\pages\chat-app-page.css" />
+    <None Include="wwwroot\dist\css\pages\contact-app-page.css" />
+    <None Include="wwwroot\dist\css\pages\dashboard1.css" />
+    <None Include="wwwroot\dist\css\pages\dashboard2.css" />
+    <None Include="wwwroot\dist\css\pages\dashboard3.css" />
+    <None Include="wwwroot\dist\css\pages\dashboard4.css" />
+    <None Include="wwwroot\dist\css\pages\easy-pie-chart.css" />
+    <None Include="wwwroot\dist\css\pages\error-pages.css" />
+    <None Include="wwwroot\dist\css\pages\file-upload.css" />
+    <None Include="wwwroot\dist\css\pages\float-chart.css" />
+    <None Include="wwwroot\dist\css\pages\floating-label.css" />
+    <None Include="wwwroot\dist\css\pages\footable-page.css" />
+    <None Include="wwwroot\dist\css\pages\form-icheck.css" />
+    <None Include="wwwroot\dist\css\pages\google-vector-map.css" />
+    <None Include="wwwroot\dist\css\pages\icon-page.css" />
+    <None Include="wwwroot\dist\css\pages\inbox.css" />
+    <None Include="wwwroot\dist\css\pages\login-register-lock.css" />
+    <None Include="wwwroot\dist\css\pages\other-pages.css" />
+    <None Include="wwwroot\dist\css\pages\pricing-page.css" />
+    <None Include="wwwroot\dist\css\pages\progressbar-page.css" />
+    <None Include="wwwroot\dist\css\pages\register3.css" />
+    <None Include="wwwroot\dist\css\pages\ribbon-page.css" />
+    <None Include="wwwroot\dist\css\pages\stylish-tooltip.css" />
+    <None Include="wwwroot\dist\css\pages\tab-page.css" />
+    <None Include="wwwroot\dist\css\pages\timeline-vertical-horizontal.css" />
+    <None Include="wwwroot\dist\css\pages\ui-bootstrap-page.css" />
+    <None Include="wwwroot\dist\css\pages\user-card.css" />
+    <None Include="wwwroot\dist\css\pages\widget-page.css" />
+    <None Include="wwwroot\dist\css\style.css" />
+    <None Include="wwwroot\dist\css\style.min.css" />
+    <None Include="wwwroot\dist\js\custom.js" />
+    <None Include="wwwroot\dist\js\custom.min.js" />
+    <None Include="wwwroot\dist\js\dashboard1.js" />
+    <None Include="wwwroot\dist\js\dashboard2.js" />
+    <None Include="wwwroot\dist\js\dashboard3.js" />
+    <None Include="wwwroot\dist\js\dashboard4.js" />
+    <None Include="wwwroot\dist\js\pages\chat.js" />
+    <None Include="wwwroot\dist\js\pages\flot-data.js" />
+    <None Include="wwwroot\dist\js\pages\footable-init.js" />
+    <None Include="wwwroot\dist\js\pages\jasny-bootstrap.js" />
+    <None Include="wwwroot\dist\js\pages\jquery.PrintArea.js" />
+    <None Include="wwwroot\dist\js\pages\jsgrid-init.js" />
+    <None Include="wwwroot\dist\js\pages\mask.js" />
+    <None Include="wwwroot\dist\js\pages\morris-data.js" />
+    <None Include="wwwroot\dist\js\pages\toastr.js" />
+    <None Include="wwwroot\dist\js\pages\validation.js" />
+    <None Include="wwwroot\dist\js\pages\widget-charts.js" />
+    <None Include="wwwroot\dist\js\pages\widget-data.js" />
+    <None Include="wwwroot\dist\js\perfect-scrollbar.jquery.min.js" />
+    <None Include="wwwroot\dist\js\sidebarmenu.js" />
+    <None Include="wwwroot\dist\js\waves.js" />
+    <None Include="wwwroot\dist\php\breadcrumb.php" />
+    <None Include="wwwroot\dist\php\footer.php" />
+    <None Include="wwwroot\dist\php\header.php" />
+    <None Include="wwwroot\dist\php\left-sidebar.php" />
+    <None Include="wwwroot\dist\php\right-sidebar.php" />
+    <None Include="wwwroot\dist\scss\colors\blue-dark.scss" />
+    <None Include="wwwroot\dist\scss\colors\blue.scss" />
+    <None Include="wwwroot\dist\scss\colors\default-dark.scss" />
+    <None Include="wwwroot\dist\scss\colors\default.scss" />
+    <None Include="wwwroot\dist\scss\colors\green-dark.scss" />
+    <None Include="wwwroot\dist\scss\colors\green.scss" />
+    <None Include="wwwroot\dist\scss\colors\megna-dark.scss" />
+    <None Include="wwwroot\dist\scss\colors\megna.scss" />
+    <None Include="wwwroot\dist\scss\colors\purple-dark.scss" />
+    <None Include="wwwroot\dist\scss\colors\purple.scss" />
+    <None Include="wwwroot\dist\scss\colors\red-dark.scss" />
+    <None Include="wwwroot\dist\scss\colors\red.scss" />
+    <None Include="wwwroot\dist\scss\core\animation.scss" />
+    <None Include="wwwroot\dist\scss\core\app.scss" />
+    <None Include="wwwroot\dist\scss\core\buttons.scss" />
+    <None Include="wwwroot\dist\scss\core\core.scss" />
+    <None Include="wwwroot\dist\scss\core\form-pages.scss" />
+    <None Include="wwwroot\dist\scss\core\header.scss" />
+    <None Include="wwwroot\dist\scss\core\other-common.scss" />
+    <None Include="wwwroot\dist\scss\core\pagination.scss" />
+    <None Include="wwwroot\dist\scss\core\perfect-scrollbar.scss" />
+    <None Include="wwwroot\dist\scss\core\right-sidebar.scss" />
+    <None Include="wwwroot\dist\scss\core\scafholding.scss" />
+    <None Include="wwwroot\dist\scss\core\sidebar.scss" />
+    <None Include="wwwroot\dist\scss\core\spinner.scss" />
+    <None Include="wwwroot\dist\scss\core\table-pages.scss" />
+    <None Include="wwwroot\dist\scss\core\theme-settings.scss" />
+    <None Include="wwwroot\dist\scss\custom.scss" />
+    <None Include="wwwroot\dist\scss\pages\bootstrap-switch.scss" />
+    <None Include="wwwroot\dist\scss\pages\breadcrumb-page.scss" />
+    <None Include="wwwroot\dist\scss\pages\chat-app-page.scss" />
+    <None Include="wwwroot\dist\scss\pages\contact-app-page.scss" />
+    <None Include="wwwroot\dist\scss\pages\dashboard1.scss" />
+    <None Include="wwwroot\dist\scss\pages\dashboard2.scss" />
+    <None Include="wwwroot\dist\scss\pages\dashboard3.scss" />
+    <None Include="wwwroot\dist\scss\pages\dashboard4.scss" />
+    <None Include="wwwroot\dist\scss\pages\easy-pie-chart.scss" />
+    <None Include="wwwroot\dist\scss\pages\error-pages.scss" />
+    <None Include="wwwroot\dist\scss\pages\file-upload.scss" />
+    <None Include="wwwroot\dist\scss\pages\float-chart.scss" />
+    <None Include="wwwroot\dist\scss\pages\floating-label.scss" />
+    <None Include="wwwroot\dist\scss\pages\footable-page.scss" />
+    <None Include="wwwroot\dist\scss\pages\form-icheck.scss" />
+    <None Include="wwwroot\dist\scss\pages\google-vector-map.scss" />
+    <None Include="wwwroot\dist\scss\pages\icon-page.scss" />
+    <None Include="wwwroot\dist\scss\pages\inbox.scss" />
+    <None Include="wwwroot\dist\scss\pages\login-register-lock.scss" />
+    <None Include="wwwroot\dist\scss\pages\other-pages.scss" />
+    <None Include="wwwroot\dist\scss\pages\pricing-page.scss" />
+    <None Include="wwwroot\dist\scss\pages\progressbar-page.scss" />
+    <None Include="wwwroot\dist\scss\pages\register3.scss" />
+    <None Include="wwwroot\dist\scss\pages\ribbon-page.scss" />
+    <None Include="wwwroot\dist\scss\pages\stylish-tooltip.scss" />
+    <None Include="wwwroot\dist\scss\pages\tab-page.scss" />
+    <None Include="wwwroot\dist\scss\pages\timeline-vertical-horizontal.scss" />
+    <None Include="wwwroot\dist\scss\pages\ui-bootstrap-page.scss" />
+    <None Include="wwwroot\dist\scss\pages\user-card.scss" />
+    <None Include="wwwroot\dist\scss\pages\widget-page.scss" />
+    <None Include="wwwroot\dist\scss\responsive.scss" />
+    <None Include="wwwroot\dist\scss\style.scss" />
+    <None Include="wwwroot\dist\scss\variable.scss" />
+    <None Include="wwwroot\dist\scss\widgets\activity.scss" />
+    <None Include="wwwroot\dist\scss\widgets\blog.scss" />
+    <None Include="wwwroot\dist\scss\widgets\calendar.scss" />
+    <None Include="wwwroot\dist\scss\widgets\carousel.scss" />
+    <None Include="wwwroot\dist\scss\widgets\chat-widget.scss" />
+    <None Include="wwwroot\dist\scss\widgets\comment.scss" />
+    <None Include="wwwroot\dist\scss\widgets\common-widget.scss" />
+    <None Include="wwwroot\dist\scss\widgets\contact.scss" />
+    <None Include="wwwroot\dist\scss\widgets\feed.scss" />
+    <None Include="wwwroot\dist\scss\widgets\msg-box.scss" />
+    <None Include="wwwroot\dist\scss\widgets\news-slide.scss" />
+    <None Include="wwwroot\dist\scss\widgets\product-review.scss" />
+    <None Include="wwwroot\dist\scss\widgets\profile.scss" />
+    <None Include="wwwroot\dist\scss\widgets\social.scss" />
+    <None Include="wwwroot\dist\scss\widgets\steamline.scss" />
+    <None Include="wwwroot\dist\scss\widgets\to-do.scss" />
+    <None Include="wwwroot\dist\scss\widgets\topbar-mail.scss" />
+    <None Include="wwwroot\dist\scss\widgets\weather-widget.scss" />
+    <None Include="wwwroot\dist\scss\widgets\widgets.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+    <PackageReference Include="EntityFrameworkPaginate" Version="1.2.0" />
+    <PackageReference Include="jQuery.FileUpload" Version="9.22.0" />
+    <PackageReference Include="JSON" Version="1.0.1" />
+    <PackageReference Include="LinqKit.EntityFramework" Version="1.1.15" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Ninject" Version="4.0.0-beta-0134" />
+    <PackageReference Include="PagedList" Version="1.17.0" />
+    <PackageReference Include="PagedList.Mvc" Version="4.5.0" />
+    <PackageReference Include="Pioneer.Pagination" Version="2.1.1" />
+    <PackageReference Include="ReflectionIT.Mvc.Paging" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="3.0.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.3" />
+    <PackageReference Include="Vse.Web.Serialization.ControlledSerializationJsonConverter" Version="1.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Services\" />
+    <Folder Include="wwwroot\demoImages\" />
+    <Folder Include="Customers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Pages\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\_ViewStart.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="wwwroot\dist\css\style.min.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

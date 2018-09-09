@@ -1,0 +1,56 @@
+﻿@page
+@model ManegmentSystems.Pages.CHECK.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Check</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Check.Amount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Check.Amount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Check.DueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Check.DueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Check.Photo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Check.Photo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Check.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Check.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Check.Income)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Check.Income.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Check.Outcome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Check.Outcome.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Check.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
+@section Scripts{ }

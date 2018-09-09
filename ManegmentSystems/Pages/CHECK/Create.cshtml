@@ -1,0 +1,48 @@
+﻿@page
+@model ManegmentSystems.Pages.CHECK.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Check</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Check.Amount" class="control-label"></label>
+                <input asp-for="Check.Amount" class="form-control" />
+                <span asp-validation-for="Check.Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Check.DueDate" class="control-label"></label>
+                <input asp-for="Check.DueDate" class="form-control" />
+                <span asp-validation-for="Check.DueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="photo" class="control-label"></label>
+                <input asp-for="photo" class="form-control" type="file" />
+                <span asp-validation-for="photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Check.Name" class="control-label"></label>
+                <input asp-for="Check.Name" class="form-control" />
+                <span asp-validation-for="Check.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts{ }

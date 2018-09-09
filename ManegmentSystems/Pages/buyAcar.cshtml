@@ -1,0 +1,723 @@
+﻿@page
+@model ManegmentSystems.Pages.buyAcarModel
+@{
+    ViewData["Title"] = "buyAcar";
+}
+
+<hr />
+<link href="~/dist/css/style.min.css" rel="stylesheet">
+<link rel="stylesheet" href="~/assets/node_modules/dropify/dist/css/dropify.min.css">
+<link rel="stylesheet" href="~/assets/node_modules/html5-editor/bootstrap-wysihtml5.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <div class="loader">
+        <div class="loader__figure"></div>
+        <p class="loader__label">We are prepare things for you ......</p>
+    </div>
+</div>
+<form asp-page="/buyacar" method="post" enctype="multipart/form-data" >
+
+    <div class="row">
+        <div class="form-group">
+            <div id="message" class="col-sm-10 col-sm-offset-2">
+
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header bg-info">
+                    <h4 class="m-b-0 text-white">نموذج شراء سيارة </h4>
+                    <h2 class="alert-success" id="message"></h2>
+                </div>
+                <div class="card-body">
+
+
+
+                    <div class="form-body">
+                        <h3 class="card-title">معلومات البائع </h3>
+                        <hr>
+                        <div class="row p-t-20">
+
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group  ">
+                                    <label class="control-label">اسم البائع </label>
+                                    <input type="text" asp-for="@Model.bUYACAR.SaleName" class="form-control" required data-validation-required-message="This Filed is required">
+
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group  ">
+
+                                    <h4 class="control-label">رقم الهوية </h4>
+                                    <input type="text" asp-for="@Model.bUYACAR.IDNumber" class="form-control" required data-validation-required-message="This Filed is required" />
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">عنوان البائع</label>
+                                    <input type="text" asp-for="@Model.bUYACAR.SaleAdress" class="form-control" required data-validation-required-message="This Filed is required">
+                                </div>
+                            </div>
+
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">رقم الهاتف</label>
+                                    <input type="text" asp-for="@Model.bUYACAR.SalePhone" class="form-control" required data-validation-required-message="This Filed is required">
+                                </div>
+                            </div>
+
+                            <!--/span-->
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">صورة الهوية </h4>
+                                        <input type="file" asp-for="@Model.bUYACAR.IdPhoto" class="dropify" data-show-remove="false" required data-validation-required-message="This Filed is required" />
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/row-->
+                        <!--/row-->
+                        <h3 class="box-title m-t-40">معلومات السيارة</h3>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="form-group">
+                                    <label>اسم المصنع</label>
+                                    <select asp-for="@Model.bUYACAR.ManufactureID" id="manfucatureshortName" class="form-control custom-select" required data-validation-required-message="This Filed is required">
+                                        <option>--Select car Manufacture--</option>
+
+                                    </select>
+
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>موديل السيارة</label>
+                                    <select asp-for="@Model.bUYACAR.ModelId" id="carModel" class="form-control custom-select" required data-validation-required-message="This Filed is required">
+
+                                        <option>--Select car model--</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="form-group">
+                                    <label>اسم المالك</label>
+                                    <input type="text" asp-for="@Model.bUYACAR.CarOwener" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">التأمين</label>
+                                    <br>
+
+
+                                    <div class="custom-control custom-radio">
+                                        @Html.RadioButtonFor(model => model.bUYACAR.Insurance, "true", new { @class = "custom-control-input", @id = "customRadio3" })
+                                        <label class="custom-control-label" for="customRadio3">&emsp;&emsp;نعم </label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        @Html.RadioButtonFor(model => model.bUYACAR.Insurance, "false", new { @class = "custom-control-input", @id = "customRadio4" })
+                                        <label class="custom-control-label" for="customRadio4">&emsp;&emsp; لا</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--/span-->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <div class="form-group">
+                                    <label>رقم النمرة</label>
+                                    <input type="text" asp-for="@Model.bUYACAR.CarID" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">معلومات اضافية</h4>
+
+                                        <div class="form-group">
+                                            <textarea name="moreDetails" asp-for="@Model.bUYACAR.moreDetails" class="textarea_editor form-control" rows="15" name="moreDetails" placeholder="Enter text ..."></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card ">
+                                <div class="card-header bg-info">
+                                    <h4 class="m-b-0 text-white">معلومات الدفع</h4>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <label class="control-label text-right  col-md-3">ثمن السيارة </label>
+                                            <div class="col-md-9">
+                                                <input type="text" asp-for="@Model.bUYACAR.PriceOutcome" class="form-control" required data-validation-required-message="This Filed is required" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group row">
+                                            <label class="control-label text-right  col-md-3">الدفعة الكاش المدفوعة</label>
+                                            <div class="col-md-9">
+                                                <input type="text" asp-for="@Model.bUYACAR.CashAmount" class="form-control" required data-validation-required-message="This Filed is required" />
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="row">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div id="toolbar">
+
+
+                                                    <a role="button" id="button2" class="btn btn-default">تحديث القائمة</a>
+
+
+                                                    <button type="button" id="button" class="btn btn-default btn-rounded">اختيار الشكات </button>
+                                                    <button type="button" class="btn btn-info btn-rounded" data-toggle="modal" data-target="#add-contact">اضافة شك جديد </button>
+
+                                                </div>
+                                                <table class="table table-striped table-bordered dt-responsive nowrap" id="example" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>ID</td>
+                                                            <th>القيمة</th>
+                                                            <th>الاسم</th>
+                                                            <th>التاريخ</th>
+                                                            <th>الصورة</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @foreach (var x in Model.checks)
+                                                        {
+                                                            <tr>
+                                                                <td>@x.Id</td>
+                                                                <td>@x.Amount</td>
+                                                                <td>@x.Name</td>
+                                                                <td>@x.DueDate</td>
+                                                                <td><img src="~/Check/f1442371-af3f-4c85-938b-f5d6f0109f3a.jpg" class="img-responsive thumb-lg" /></td>
+                                                            </tr>}
+                                                      
+
+                                                    </tbody>
+                                                </table>
+                                                @*<table id="table"
+                                                           data-toggle="table"
+                                                           data-toolbar="#toolbar"
+                                                           data-height="460"
+                                                           data-pagination="true"
+                                                           data-url="../data.json" data-click-to-select="true" data-search="true">
+                                                        <thead>
+                                                            <tr>
+                                                                <th data-field="state" data-checkbox="true"></th>
+                                                                <th data-field="Amount">الكمية</th>
+                                                                <th data-field="DueDate">التاريخ</th>
+                                                                <th data-field="Name">الاسم</th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>*@
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success  waves-effect"> <i class="fa fa-check"></i> Save</button>
+                        <button type="button" class="btn btn-inverse  waves-effect" asp-page="/Index">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+
+<div id="add-contact" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="fa fa-times"></button>
+                <h4 class="modal-title" id="myModalLabel">Add New Contact</h4>
+            </div>
+            <div class="modal-body">
+                <form class="save-check" method="post" enctype="multipart/form-data" id="FileUploadForm">
+                    <div class="form-group">
+                        <div class="col-md-12 m-b-20">
+                            <input type="text" id="owner" class="form-control" placeholder="اسم صاحب الشك">
+                        </div>
+                        <div class="col-md-12 m-b-20">
+                            <input type="number" id="amount" class="form-control" placeholder="قيمة الشك">
+                        </div>
+                        <div class="col-md-12 m-b-20">
+                            <input type="date" id="date" class="form-control" placeholder="تاريخ الشك">
+                        </div>
+                        <div class="col-md-12 m-b-20">
+                            <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light">
+                                <span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
+                                <input id="uploadfile" type="file" class="upload">||
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-default waves-effect">تأكيد</button>
+
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">OK</button>
+                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js "></script>
+    <!--Menu sidebar -->
+    <script type="text/javascript" language="JavaScript">
+        var deta;
+        $(document).ready(function () {
+
+            $('#btnUpload').on('click', function () {
+                debugger;
+                var files = $('#Photo').prop("files");
+
+                var fdata = new FormData();
+
+                for (var i = 0; i < files.length; i++) {
+
+                    fdata.append("files", files[i]);
+
+                }
+
+
+                if (files.length > 0) {
+
+                    $.ajax({
+
+                        type: "POST",
+
+                        url: "/buyAcar?handler=Upload",
+
+
+                        beforeSend: function (xhr) {
+
+                            xhr.setRequestHeader("XSRF-TOKEN",
+
+                                $('input:hidden[name="__RequestVerificationToken"]').val());
+
+                        },
+
+                        data: fdata,
+
+                        contentType: false,
+
+                        processData: false,
+
+                        success: function (response) {
+                            class2(response)
+
+
+
+
+                        }, error: function (data) {
+                            alert(data.messages)
+
+                        }
+
+                    });
+
+                }
+
+                else {
+
+                    alert('Please select a file.')
+
+
+
+                }
+
+            })
+
+
+            function class2(data) {
+                var checkOwner = $('#owner').val();
+                var checkAmount = $('#amount').val();
+                var date = $('#date').val();
+                $.ajax({
+
+                    type: "POST",
+
+                    url: "/api/check",
+
+
+                    beforeSend: function (xhr) {
+
+                        xhr.setRequestHeader("XSRF-TOKEN",
+
+                            $('input:hidden[name="__RequestVerificationToken"]').val());
+
+                    },
+                    dataType: "text",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        Name: checkOwner,
+                        Amount: checkAmount,
+                        DueDate: date,
+                        files: data
+                    }),
+
+
+                    success: function (deata) {
+                        console.log(deata);
+                        alert(deata);
+
+                    }, error: function (data) {
+                        alert(data.messages)
+
+                    }
+
+                });
+
+            }
+        });
+
+    </script>
+    <script src="~/assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="~/assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+    <!--Custom JavaScript -->
+
+    <script src="~/assets/node_modules/dropify/dist/js/dropify.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Basic
+            $('.dropify').dropify();
+
+            // Translated
+            $('.dropify-fr').dropify({
+                messages: {
+                    default: 'Glissez-déposez un fichier ici ou cliquez',
+                    replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                    remove: 'Supprimer',
+                    error: 'Désolé, le fichier trop volumineux'
+                }
+            });
+
+            // Used events
+            var drEvent = $('#input-file-events').dropify();
+
+            drEvent.on('dropify.beforeClear', function (event, element) {
+                return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+            });
+
+            drEvent.on('dropify.afterClear', function (event, element) {
+                alert('File deleted');
+            });
+
+            drEvent.on('dropify.errors', function (event, element) {
+                console.log('Has Errors');
+            });
+
+            var drDestroy = $('#input-file-to-destroy').dropify();
+            drDestroy = drDestroy.data('dropify')
+            $('#toggleDropify').on('click', function (e) {
+                e.preventDefault();
+                if (drDestroy.isDropified()) {
+                    drDestroy.destroy();
+                } else {
+                    drDestroy.init();
+                }
+            })
+        });
+    </script>
+
+    <!-- wysuhtml5 Plugin JavaScript -->
+    <script src="~/assets/node_modules/html5-editor/wysihtml5-0.3.0.js"></script>
+    <script src="~/assets/node_modules/html5-editor/bootstrap-wysihtml5.js"></script>
+    <script>
+        function clonrow() {
+            var div = document.getElementById('checks'),
+                clone = div.cloneNode(true); // true means clone all childNodes and all event handlers
+
+            div.appendChild(clone);
+        }
+        function addnew(source, numofrepete) {
+            multiplyNode(document.getElementById(source), document.getElementById(numofrepete).value, true);
+
+        }
+        function multiplyNode(node, count, deep) {
+            for (var i = 0, copy; i < count - 1; i++) {
+                copy = node.cloneNode(deep);
+                node.parentNode.insertBefore(copy, node);
+            }
+        }
+
+
+        $(document).ready(function () {
+
+            $('.textarea_editor').wysihtml5();
+
+
+        });
+    </script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            var deta;
+            $.ajax({
+                type: "GET",
+
+                url: "/api/Manufacture",
+                success: function (data) {
+                    for (let i = 0; i < data.length; i++) {
+                        $('#manfucatureshortName').append("<option  value='" + data[i]['Id'] + "'>" + data[i]['Name'] + "</option>");
+
+
+                    }
+                    deta = data;
+
+                },
+                error: function (data) {
+                    console.log(data);
+
+                }
+            })
+
+            $('#manfucatureshortName').on('change', function () {
+                $('#carModel').empty();
+                var id = $('#manfucatureshortName').val();
+                console.log(deta);
+                for (let i = 0; i < 40; i++) {
+
+                    console.log(deta[i]['Id']);
+                    if (deta[i]['Id'] == id) {
+                        id = i;
+                        break;
+                    }
+                }
+                $('#carModel').append("   <option>--Select car model--</option>");
+                var length = deta[parseInt(id)]['Model'].length;
+                for (let i = 0; i < length; i++) {
+
+                    $('#carModel').append("<option value='" + deta[id]['Model'][i]['Id'] + "'>" + deta[id]['Model'][i]['Name'] + "</option>");
+                }
+
+
+
+            });
+
+
+
+        });
+
+    </script>
+    <!--Custom JavaScript -->
+    <script src="~/dist/js/custom.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+
+    <script>
+        var checkedRows = [];
+
+        var table = $('#example').DataTable();
+      
+            $button = $('#button');
+        $button2 = $('#button2');
+
+
+        $(function () {
+            $button.click(function () {
+                var check = [];
+
+                debugger;
+                var data = table.rows('.selected').data();
+                for (let i = 0; i < data.length; i++) {
+              
+                        
+                    check.push(data[i][0]);
+
+                }
+
+
+                console.log('Doing ajax submit');
+
+
+
+
+                $.ajax({
+                    type: 'post',
+                    url: "/buyAcar?handler=BuyForm",
+                    dataType: "json",
+                    traditional: true,
+                    beforeSend: function (xhr) {
+
+                        xhr.setRequestHeader("XSRF-TOKEN",
+
+                            $('input:hidden[name="__RequestVerificationToken"]').val());
+
+                    },
+                    data: { x: check },
+                   
+                }).done(function (result) {
+                    console.log(result);
+
+
+                });
+
+            });
+
+
+
+        });
+
+    </script>
+    <!-- Latest compiled and minified Locales -->
+    <script src="~/assets/node_modules/bootstrap-table/dist/bootstrap-table.ints.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var table = $('#example').dataTable();
+
+            $('#example tbody').on('click', 'tr', function () {
+                $(this).toggleClass('selected');
+            });
+
+        
+            //$('#button').click(function () {
+            //    var check = [];
+            //    for (let i = 0; i < table.rows('.selected').data().length; i++) {
+            //        check.push(table.rows('.selected').data()[i]);
+
+            //    }
+                
+
+            //    console.log('Doing ajax submit');
+
+              
+              
+
+            //    $.ajax({
+            //        type: 'post',
+            //        url: "/buyAcar?handler=BuyForm",
+
+            //        beforeSend: function (xhr) {
+
+            //            xhr.setRequestHeader("XSRF-TOKEN",
+
+            //                $('input:hidden[name="__RequestVerificationToken"]').val());
+
+            //        },
+            //        data: JSON.stringify(check),
+            //        processData: false,
+            //        contentType: false
+            //    }).done(function (result) {
+            //        console.log(result);
+                   
+
+            //    });
+ 
+            //});
+        });
+    </script>
+
+    <script>$(function () {
+            $("#FileUploadForm").submit(function (e) {
+                e.preventDefault();
+
+                console.log('Doing ajax submit');
+
+                var formAction = $(this).attr("action");
+                var fdata = new FormData();
+
+                var fileInput = $('#uploadfile')[0];
+                var file = fileInput.files[0];
+                var checkOwner = $('#owner').val();
+                var checkAmount = $('#amount').val();
+                var date = $('#date').val();
+                fdata.append("files", file);
+                fdata.append("Amount", checkAmount);
+                fdata.append("DueDate", date);
+                fdata.append("Name", checkOwner);
+
+                $.ajax({
+                    type: 'post',
+                    url: "/buyAcar?handler=Add",
+                    beforeSend: function (xhr) {
+
+                        xhr.setRequestHeader("XSRF-TOKEN",
+
+                            $('input:hidden[name="__RequestVerificationToken"]').val());
+
+                    },
+                    data: fdata,
+                    processData: false,
+                    contentType: false
+                }).done(function (result) {
+                    console.log(result);
+                    var t = $('#example').DataTable();
+                    t.row.add(result).draw()
+
+                });
+            });
+        })</script>
+}
+
+
+
+
+
